@@ -2,9 +2,6 @@
 <head>
 </head>
 <body>
-	<?php
-	include 'Top.php';
-	?>
 	<fieldset>
 		<?php
 		$userName = $pass = "";
