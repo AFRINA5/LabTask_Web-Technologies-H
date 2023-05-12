@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 06, 2023 at 05:55 PM
+-- Generation Time: May 12, 2023 at 12:17 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -40,7 +40,34 @@ CREATE TABLE `events` (
 --
 
 INSERT INTO `events` (`id`, `client_name`, `event_name`, `price`, `approval_status`) VALUES
-(1, 'Nirjona', 'Registrar', '10000', 1);
+(2, 'nahinafrin', 'manni', '25006', 1),
+(4, 'Ashik', 'Function', '1300', 0),
+(100, 'kollani', 'fees', '1200', 0),
+(5950, 'n', 'Fees', '1200', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `students`
+--
+
+CREATE TABLE `students` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `age` int(3) NOT NULL,
+  `gender` enum('Male','Female') NOT NULL,
+  `city` varchar(50) NOT NULL,
+  `email` text DEFAULT NULL,
+  `address` text DEFAULT NULL,
+  `phone` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `students`
+--
+
+INSERT INTO `students` (`id`, `name`, `age`, `gender`, `city`, `email`, `address`, `phone`) VALUES
+(1, 'Naiem', 12, 'Male', 'ga', 'h@h.com', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -90,7 +117,17 @@ INSERT INTO `users` (`id`, `username`, `password`, `created_at`, `email`, `birth
 (0, 'NN', '$2y$10$T6OHxI8gtJTyD12GmeAknesSvOFye941DB94qkv7JnlcbZhjzylj.', '2023-05-02 04:40:22', '', ''),
 (0, 'TT', '$2y$10$Zqt3cu5gWE3y1SqGLiQFheGFcO4eQAFTFRvdxomSbQ2hhqJqgw7Jq', '2023-05-02 04:49:02', '', ''),
 (0, 'FZA', '$2y$10$aOkO.rZMpCG2SxRimbm1V.pnfNHG6Z27FFvJkGwzvyjBtBQyfsuY2', '2023-05-06 12:26:23', '', ''),
-(0, 'Joya', '$2y$10$ipx00yr5saAn4wPcDrmeZOjWAtRUSxzYv25XUmAi4rp1.nVlAoqVC', '2023-05-06 14:10:10', '', '');
+(0, 'Joya', '$2y$10$ipx00yr5saAn4wPcDrmeZOjWAtRUSxzYv25XUmAi4rp1.nVlAoqVC', '2023-05-06 14:10:10', '', ''),
+(0, 'afrina', '$2y$10$7UWLRLr77jdZRlYFWTMiKupTSYWoZaIIwEmFRtWxKvyA4t/sW5cX6', '2023-05-06 22:02:30', '', ''),
+(0, 'nahin', '$2y$10$LNgJ.zt0bzyKg0Hsu/2UWe0GXTEceVkCNMw93aCwiuOMfPCwA1XMS', '2023-05-06 22:07:23', '', ''),
+(0, 'fahim', '$2y$10$4SEhMXcWbFhkidLhnSVzZeHBeZrXsPkKgkQlVmgVsIB3mFm9ms5SG', '2023-05-06 22:09:44', '', ''),
+(50, 'nir', 'Nirupoma123@', '2023-05-07 11:26:11', 'nir@gmail.com', '03-02-2000'),
+(0, 'kolanni', '$2y$10$KjWaztpl1QYFAzckAaWtK.6ify.NsaHClXoTKbCNzUqy6.6.ajDKe', '2023-05-07 12:00:15', '', ''),
+(0, 'nir1', 'Nirupoma123@', '2023-05-07 13:11:35', '', ''),
+(0, 'nir1', 'Nirupoma123@', '2023-05-07 13:11:46', '', ''),
+(0, 'hasan', '$2y$10$iwHSOMQyJLz7jhXHWa3sFOPsBU0oUQXOlWD0NVxeLx1WK7oihj.Ra', '2023-05-07 13:12:49', '', ''),
+(0, 'hamid', '$2y$10$pePC91JKQNQASzYzcRuKl.jsw1ybZmeGbrm9xoxW9amtL/7lcAC56', '2023-05-07 13:34:09', '', ''),
+(0, 'wert', '$2y$10$jF4GvA3S8y8Du566cmXN0.mlo05IbMfATQyihxaiEgTd48BZdwQpq', '2023-05-07 13:53:13', '', '');
 
 --
 -- Indexes for dumped tables
@@ -104,6 +141,12 @@ ALTER TABLE `events`
   ADD UNIQUE KEY `client_name` (`client_name`);
 
 --
+-- Indexes for table `students`
+--
+ALTER TABLE `students`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -111,7 +154,13 @@ ALTER TABLE `events`
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5951;
+
+--
+-- AUTO_INCREMENT for table `students`
+--
+ALTER TABLE `students`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
